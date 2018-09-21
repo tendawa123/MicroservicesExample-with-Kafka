@@ -7,3 +7,5 @@
 3.Start eureka server.
 4.Start book-catalogs-service.
 5.Start book-catalogs-client. 
+6.When you are hitting webservices exposed with swagger it will send to topics and consumer will consume.
+7.Swagger url -http://localhost:8088/swagger-ui.html
