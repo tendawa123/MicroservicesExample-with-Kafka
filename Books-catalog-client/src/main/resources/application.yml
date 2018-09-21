@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: books-catalog-client
+
+server:
+  port: 8087
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8762/eureka}
+      
+kafka:
+    consumer:
+      group-id: foo,bar
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+           
+app:
+  topic:
+     foo: first-topic.t
+     bar: second-topic.t     
